@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-blue-600">Lê Duy Việt</a>
+            <div class="hidden md:flex space-x-4">
+                <a href="#home" class="nav-link active">Trang chủ</a>
+                <a href="#personal-info" class="nav-link">Thông tin cá nhân</a>
+                <a href="#essay" class="nav-link">Bài luận</a>
+                <a href="#creative" class="nav-link">Minh chứng kỹ năng</a>
+                <a href="#contact" class="nav-link">Liên hệ</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg py-2">
+            <a href="#home" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Trang chủ</a>
+            <a href="#personal-info" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Thông tin cá nhân</a>
+            <a href="#essay" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Bài luận</a>
+            <a href="#creative" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Minh chứng Kỹ năng</a>
+            <a href="#contact" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Liên hệ</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-bg py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <img src="avatar1.png" alt="Ảnh chân dung của Lê Duy Việt" class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full shadow-xl mb-8 border-4 border-white">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Lê Duy Việt</h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-2">Graphic Designer & Web Developer</p>
+                <p class="text-md text-gray-500 mb-8 max-w-2xl mx-auto">Hồ sơ này trình bày thông tin cá nhân, bài luận và những ý tưởng của tôi nhằm đóng góp vào sự phát triển của Internet Việt Nam theo tinh thần Nghị quyết số 57-NQ/TW.</p>
+                <a href="#essay" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300 text-lg">Xem Bài luận của tôi</a>
+            </div>
+        </section>
+
+        <section id="personal-info" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Thông tin cá nhân</h2>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+                    <div class="card">
+                        <img src="avatar.jpg" alt="Ảnh CV của Lê Duy Việt" class="rounded-lg shadow-md mb-6 w-full">
+                    </div>
+                    <div class="space-y-6">
+                        <div class="card">
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Tổng quan</h3>
+                            <p><strong>Họ và tên:</strong> Lê Duy Việt</p>
+                            <p><strong>Ngày sinh:</strong> 26/05/2006</p>
+                            <p><strong>Trường:</strong> Dalat University</p>
+                            <p><strong>Chuyên ngành:</strong> Information Technology</p>
+                            <p><strong>Email:</strong> vietld.vn@gmail.com</p>
+                            <p><strong>Điện thoại:</strong> (+84) 912 218 985</p>
+                        </div>
+                        <div class="card">
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Học vấn & Kỹ năng</h3>
+                            <p class="mb-2"><strong>Học vấn:</strong> Sinh viên năm hai, ngành Công nghệ Thông tin, Đại học Đà Lạt.</p>
+                            <p><strong>Kỹ năng:</strong></p>
+                            <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700">
+                                <li>Python, C++, C#, HTML, CSS, Javascript</li>
+                                <li>Adobe Photoshop, Figma, Sketch</li>
+                                <li>Giao tiếp Tiếng Anh</li>
+                                <li>Làm việc nhóm, Giải quyết vấn đề,...</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="essay" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Bài luận Ứng tuyển Fellowship</h2>
+                <div class="max-w-3xl mx-auto bg-white p-6 md:p-10 rounded-xl shadow-xl">
+                    <h3 class="text-2xl font-bold text-blue-700 mb-6 text-center">Vai trò của Tài nguyên Internet và Hạ tầng Internet Quan trọng Quốc gia trong việc Thực hiện Mục tiêu Đổi mới, Sáng tạo, Đột phá theo Tinh thần Nghị quyết số 57-NQ/TW</h3>
+                    
+                    <article class="mb-8 prose lg:prose-xl max-w-none text-justify">
+                        <p class="mb-4">Trong bối cảnh Việt Nam đang mạnh mẽ tiến vào cuộc Cách mạng Công nghiệp lần thứ tư, việc phát triển và tối ưu hóa tài nguyên Internet cùng hạ tầng Internet quốc gia có vai trò then chốt. Nghị quyết số 57-NQ/TW của Bộ Chính trị đã đặt ra những mục tiêu chiến lược về đổi mới, sáng tạo và đột phá, và Internet chính là nền tảng không thể thiếu để hiện thực hóa những mục tiêu này.</p>
+
+                        <h4 class="text-xl font-semibold text-gray-700 mt-6 mb-3">1. Phân tích vai trò của tài nguyên Internet và hạ tầng Internet quan trọng quốc gia:</h4>
+                        <p>
+                            Tài nguyên Internet quốc gia, bao gồm tên miền ".vn", địa chỉ IP (IPv4/IPv6), số hiệu mạng (ASN), cùng với hạ tầng Internet quan trọng như Hệ thống máy chủ tên miền (DNS) quốc gia và Trạm trung chuyển Internet quốc gia (VNIX), tạo thành xương sống cho mọi hoạt động trên không gian mạng, đóng góp trực tiếp vào các mục tiêu của Nghị quyết:
+                        </p>
+                        <ul class="list-disc list-inside ml-4 space-y-2 text-gray-700">
+                            <li>
+                                <strong>Tên miền quốc gia ".vn":</strong> Không chỉ là định danh trực tuyến, tên miền ".vn" còn khẳng định chủ quyền số quốc gia, xây dựng thương hiệu và niềm tin cho doanh nghiệp, tổ chức Việt Nam. Nó là nền tảng cho các dịch vụ số "Make in Vietnam" phát triển, thúc đẩy <span class="font-semibold">đổi mới</span> trong thương mại điện tử, giáo dục trực tuyến và các nền tảng nội dung số. Sự tin cậy của tên miền ".vn" khuyến khích <span class="font-semibold">sáng tạo</span> trong việc xây dựng các giải pháp số mang bản sắc Việt.
+                            </li>
+                            <li>
+                                <strong>Địa chỉ IP (IPv4/IPv6) và Số hiệu mạng (ASN):</strong> Là nền tảng kỹ thuật cho mọi kết nối Internet, địa chỉ IP, đặc biệt là IPv6 với không gian địa chỉ khổng lồ, mở ra cánh cửa cho các <span class="font-semibold">đột phá</span> công nghệ như Internet of Things (IoT), thành phố thông minh, nông nghiệp công nghệ cao và mạng 5G. Việc quy hoạch và cấp phát hiệu quả tài nguyên IP/ASN đảm bảo sự phát triển bền vững và khả năng mở rộng của hạ tầng số quốc gia, tạo điều kiện cho các ý tưởng <span class="font-semibold">sáng tạo</span> mới nhất được triển khai.
+                            </li>
+                            <li>
+                                <strong>Hệ thống DNS quốc gia và Trạm trung chuyển VNIX:</strong> Hệ thống DNS quốc gia đảm bảo tính ổn định, an toàn và tốc độ truy cập Internet cho người dùng Việt Nam, là lá chắn quan trọng trước các nguy cơ tấn công mạng. VNIX giúp tối ưu hóa lưu lượng Internet trong nước, giảm độ trễ, tiết kiệm chi phí kết nối quốc tế và nâng cao trải nghiệm người dùng. Một hạ tầng DNS và IXP mạnh mẽ là điều kiện tiên quyết cho các ứng dụng đòi hỏi băng thông cao và độ trễ thấp như streaming, game trực tuyến, điện toán đám mây "Make in Vietnam", từ đó thúc đẩy <span class="font-semibold">đổi mới</span> và <span class="font-semibold">sáng tạo</span> trong lĩnh vực nội dung số và dịch vụ trực tuyến.
+                            </li>
+                        </ul>
+                        <p class="mt-3">
+                            Tóm lại, những yếu tố này không chỉ là hạ tầng kỹ thuật mà còn là môi trường, là công cụ để các ý tưởng <span class="font-semibold">đổi mới</span> được hình thành, các giải pháp <span class="font-semibold">sáng tạo</span> được triển khai và các <span class="font-semibold">đột phá</span> công nghệ được hiện thực hóa, phù hợp với tinh thần Nghị quyết 57-NQ/TW.
+                        </p>
+                    </article>
+
+                    <article class="mb-8 prose lg:prose-xl max-w-none text-justify">
+                        <h4 class="text-xl font-semibold text-gray-700 mt-6 mb-3">2. Đề xuất ý tưởng sáng tạo trong việc sử dụng hiệu quả tài nguyên Internet, hạ tầng Internet quốc gia:</h4>
+                        <p>
+                            Để khai thác tối đa tiềm năng của tài nguyên và hạ tầng Internet quốc gia, góp phần thực hiện mục tiêu của Nghị quyết 57-NQ/TW, tôi xin đề xuất hai ý tưởng sau:
+                        </p>
+                        <div class="my-6 p-4 border-l-4 border-blue-500 bg-blue-50 rounded-md">
+                            <h5 class="text-lg font-semibold text-blue-700">Ý tưởng 1: Nền tảng "Ươm Mầm Số"</h5>
+                            <p class="mt-1">
+                                <strong>Mục tiêu:</strong> Khuyến khích và hỗ trợ thế hệ trẻ, đặc biệt là sinh viên và các nhóm khởi nghiệp giai đoạn đầu, trong việc ứng dụng tài nguyên Internet quốc gia để phát triển các dự án đổi mới sáng tạo.
+                            </p>
+                            <p class="mt-1">
+                                <strong>Triển khai:</strong>
+                                <ul class="list-disc list-inside ml-4 text-sm">
+                                    <li>VNNIC phối hợp với các trường đại học và vườn ươm công nghệ xây dựng một cổng thông tin (ví dụ: `uommamso.vnnic.vn` hoặc `uommamso.vn`).</li>
+                                    <li>Cung cấp các gói ưu đãi/miễn phí tên miền ".vn" và địa chỉ IPv6 cho các dự án tiềm năng được lựa chọn.</li>
+                                    <li>Tổ chức các workshop, buổi đào tạo về quản trị và phát triển dịch vụ trên nền tảng tài nguyên Internet Việt Nam (DNSSEC, IPv6, .vn best practices).</li>
+                                    <li>Tạo diễn đàn kết nối các nhà phát triển trẻ với các chuyên gia và doanh nghiệp trong ngành, sử dụng hạ tầng VNIX để tối ưu các buổi giao lưu trực tuyến.</li>
+                                </ul>
+                            </p>
+                            <p class="mt-1">
+                                <strong>Hiệu quả:</strong> Thúc đẩy tinh thần <span class="font-semibold">đổi mới, sáng tạo</span> từ gốc, nâng cao nhận thức và kỹ năng sử dụng tài nguyên Internet quốc gia, tạo ra một thế hệ công dân số có năng lực đóng góp vào sự phát triển đột phá của đất nước.
+                            </p>
+                        </div>
+                        <div class="my-6 p-4 border-l-4 border-green-500 bg-green-50 rounded-md">
+                            <h5 class="text-lg font-semibold text-green-700">Ý tưởng 2: "Bản Đồ Số Tài Nguyên Văn Hóa Việt Nam" (Vietnamese Cultural Heritage Digital Map)</h5>
+                            <p class="mt-1">
+                                <strong>Mục tiêu:</strong> Số hóa và quảng bá di sản văn hóa Việt Nam trên không gian mạng, sử dụng hiệu quả tài nguyên Internet để tạo ra một sản phẩm <span class="font-semibold">sáng tạo</span>, có giá trị giáo dục và du lịch cao, đồng thời là một <span class="font-semibold">đột phá</span> trong việc bảo tồn và phát huy giá trị văn hóa.
+                            </p>
+                            <p class="mt-1">
+                                <strong>Triển khai:</strong>
+                                <ul class="list-disc list-inside ml-4 text-sm">
+                                    <li>Xây dựng một cổng thông tin tương tác với tên miền uy tín như `disanvanhoa.vn` hoặc `baotangso.vn`.</li>
+                                    <li>Ứng dụng công nghệ 3D, VR/AR để tái hiện các di tích, hiện vật. Nền tảng này sẽ cần hạ tầng máy chủ mạnh mẽ trong nước, kết nối qua VNIX để đảm bảo trải nghiệm mượt mà cho người dùng Việt Nam.</li>
+                                    <li>Mỗi di sản/hiện vật được cấp một định danh số duy nhất, có thể liên kết với thông tin chi tiết, hình ảnh, video chất lượng cao.</li>
+                                    <li>Sử dụng hệ thống DNS quốc gia để đảm bảo truy cập ổn định và an toàn. Khuyến khích các tổ chức văn hóa địa phương đăng ký tên miền con (ví dụ: `hue.disanvanhoa.vn`) để quản lý nội dung khu vực.</li>
+                                    <li>Tích hợp các tính năng cho phép người dùng đóng góp thông tin, hình ảnh (có kiểm duyệt), tạo cộng đồng yêu văn hóa.</li>
+                                </ul>
+                            </p>
+                             <p class="mt-1">
+                                <strong>Hiệu quả:</strong> Góp phần bảo tồn di sản, thúc đẩy du lịch thông minh, giáo dục lịch sử văn hóa một cách trực quan và hấp dẫn. Đây là một ví dụ về <span class="font-semibold">đổi mới</span> trong cách tiếp cận và quảng bá văn hóa, tạo ra một sản phẩm số <span class="font-semibold">sáng tạo</span> mang tầm quốc gia.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article class="mt-8 prose lg:prose-xl max-w-none">
+                        <h4 class="text-xl font-semibold text-gray-700 mt-6 mb-3">3. Trích dẫn nguồn tham khảo:</h4>
+                        <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700">
+                            <li><a href="https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-quyet-ve-dot-pha-phat-trien-khoa-hoc-cong-nghe-doi-moi-sang-tao-va-chuyen-doi-so-quoc-gia-119241224180048642.htm" target="_blank">Nghị quyết số 57-NQ/TW của Bộ Chính trị.</a></li>
+                            <li><a href="https://vnnic.vn/" target="_blank">Website Trung tâm Internet Việt Nam (VNNIC)</a>.</li>
+                            <li><a href="https://thuvienphapluat.vn/van-ban/Cong-nghe-thong-tin/Quyet-dinh-749-QD-TTg-2020-phe-duyet-Chuong-trinh-Chuyen-doi-so-quoc-gia-444136.aspx" target="_blank">Quyết định số 749/QĐ-TTg Phê duyệt "Chương trình Chuyển đổi số quốc gia đến năm 2025, định hướng đến năm 2030".</a></li>
+                            <li>Gemini & ChatGPT</li>
+                        </ul>
+                    </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="creative" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Minh chứng kỹ năng</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Các chứng chỉ và dự án cá nhân</p>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/1FE0MNXPD964" target="_blank">
+                            <img src="cert/Cyber.png" alt="[Hình ảnh chứng chỉ Google Cybersecurity Coursera]" class="rounded-md mb-4 w-full h-48 object-cover">
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Google Cybersecurity (Coursera)</h3>
+                            <p class="text-gray-600 mb-3 text-sm">Nền tảng về an ninh mạng và các biện pháp bảo vệ hệ thống theo chương trình của Google.</p>
+                        </a>
+                    </div>
+                    
+                    <div class="card">
+                        <a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/ZWPCH0SRQTQE" target="_blank">
+                            <img src="cert/ITSupport.png" alt="[Hình ảnh chứng chỉ Google IT Support Coursera]" class="rounded-md mb-4 w-full h-48 object-cover">
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Google IT Support (Coursera)</h3>
+                            <p class="text-gray-600 mb-3 text-sm">Kiến thức và kỹ năng hỗ trợ kỹ thuật CNTT chuyên nghiệp theo chương trình của Google.</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/XEXL21TQ7AT9" target="_blank">
+                            <img src="cert/uxdesign.png" alt="[Hình ảnh chứng chỉ Google UX Design Coursera]" class="rounded-md mb-4 w-full h-48 object-cover">
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Google UX Design (Coursera)</h3>
+                            <p class="text-gray-600 mb-3 text-sm">Hoàn thành Chứng chỉ Chuyên nghiệp về Thiết kế Trải nghiệm Người dùng từ Google.</p>
+                        </a>
+                    </div> 
+
+                    <div class="card">
+                        <a href="https://www.hackerrank.com/certificates/iframe/450df963b3b3" target="_blank">
+                            <img src="cert/Python.png" alt="[Hình ảnh chứng chỉ Python HackerRank]" class="rounded-md mb-4 w-full h-48 object-cover">
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Chứng chỉ Python (HackerRank)</h3>
+                            <p class="text-gray-600 mb-3 text-sm">Hoàn thành các bài kiểm tra kỹ năng Python, bao gồm các khái niệm cơ bản và giải quyết vấn đề.</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-ae013a23-0ca1-4bca-b04b-0c3b826335cb.jpg" target="_blank">
+                            <img src="cert/cpp.jpg" alt="[Hình ảnh chứng chỉ C++ Udemy]" class="rounded-md mb-4 w-full h-48 object-cover">
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Chứng chỉ Lập trình C++ (Udemy)</h3>
+                            <p class="text-gray-600 mb-3 text-sm">Nắm vững kiến thức nền tảng và các khái niệm nâng cao trong lập trình C++ qua khóa học trực tuyến.</p>
+                        </a>
+                    </div>      
+
+                    <div class="card">
+                        <a href="https://www.freecodecamp.org/certification/VietUniverse/responsive-web-design" target="_blank">
+                            <img src="cert/RWD.png" alt="[Hình ảnh chứng chỉ Responsive Web Design freeCodeCamp]" class="rounded-md mb-4 w-full h-48 object-cover">
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Thiết kế Web Đáp ứng (freeCodeCamp)</h3>
+                            <p class="text-gray-600 mb-3 text-sm">Kỹ năng xây dựng website tương thích trên mọi thiết bị sử dụng HTML5 và CSS3.</p>
+                        </a>
+                    </div>                          
+                    
+                    <div class="card">
+                        <a href="https://vietuniverse.github.io/E-commerce" target="_blank">
+                            <img src="cert/shop.png" alt="[Hình ảnh dự án website E-commerce]" class="rounded-md mb-4 w-full h-48 object-cover">
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Dự án Website Thương mại Điện tử</h3>
+                            <p class="text-gray-600 mb-3 text-sm">Mô phỏng giao diện website thương mại điện tử, tập trung vào trải nghiệm người dùng và thiết kế đáp ứng.</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="https://vietuniverse.github.io/fb" target="_blank">
+                            <img src="cert/fb.png" alt="[Hình ảnh dự án clone Facebook]" class="rounded-md mb-4 w-full h-48 object-cover">
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Dự án Clone Giao diện Facebook</h3>
+                            <p class="text-gray-600 mb-3 text-sm">Mô phỏng giao diện trang chủ Facebook, thực hành kỹ năng HTML, CSS và Tailwind CSS.</p>
+                        </a>
+                    </div>
+                    
+                    <div class="card">
+                        <a href="https://vietuniverse.github.io/ytb" target="_blank">
+                            <img src="cert/ytb.png" alt="[Hình ảnh dự án clone YouTube]" class="rounded-md mb-4 w-full h-48 object-cover">
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Dự án Clone Giao diện YouTube</h3>
+                            <p class="text-gray-600 mb-3 text-sm">Mô phỏng giao diện trang chủ YouTube, rèn luyện kỹ năng thiết kế giao diện web phức tạp.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Liên hệ</h2>
+                <div class="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-xl text-center">
+                    <p class="text-gray-700 mb-4">Cảm ơn VNNIC đã dành thời gian xem xét hồ sơ của tôi. Rất mong nhận được phản hồi và cơ hội được đóng góp vào chương trình VISY Fellowship 2025.</p>
+                    <p class="text-gray-700 mb-2"><strong>Email:</strong> <a href="mailto:vietld.vn@gmail.com" class="text-blue-500 hover:underline">vietld.vn@gmail.com</a></p>
+                    <p class="text-gray-700 mb-6"><strong>Điện thoại:</strong> (+84) 912 218 985</p>
+                    <div class="flex justify-center space-x-4">
+                        
+                        <a href="https://www.linkedin.com/in/vi%E1%BB%87t-l%C3%AA-duy-498209348/" target="_blank" class="text-gray-500 hover:text-blue-600 transition duration-300">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/tuilavietle" target="_blank" class="text-gray-500 hover:text-blue-700 transition duration-300">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10s-10 4.477-10 10c0 4.99 3.657 9.128 8.438 9.878v-6.987h-2.54v-2.891h2.54v-2.077c0-2.508 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.73h2.773l-.443 2.891h-2.33v6.987c4.781-.75 8.437-4.888 8.437-9.878z" clip-rule="evenodd"/></svg>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8 text-center">
+        <div class="container mx-auto px-6">
+            <p>© <span id="currentYear"></span> Le Duy Viet</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
