@@ -1,12 +1,59 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio - Le Duy Viet</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background-color: #f0f4f8; 
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #1a202c; 
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            transition: transform 0.3s ease-in-out;
+            height: 100%; 
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .nav-link {
+            color: #4a5568; 
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            background-color: #2b6cb0; 
+            color: white;
+        }
+        .lang-vi {
+            font-style: italic;
+            color: #6b7280; /* text-gray-500 */
+            font-size: 0.9em;
+            margin-top: 4px;
+            display: block; /* Ensure it takes its own line if needed */
+        }
+        #menu-button svg {
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -43,7 +90,7 @@
                 <img src="avatar1.png" alt="Portrait of Le Duy Viet" class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full shadow-xl mb-8 border-4 border-white">
                 <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Le Duy Viet</h1>
                 <p class="text-lg md:text-xl text-gray-600 mb-2">Graphic Designer & Web Developer</p>
-                <p class="text-md text-gray-500 mb-8 max-w-2xl mx-auto">This website presents my personal information, essay, and ideas aimed at contributing to the development of the Internet in Vietnam, in the spirit of Resolution No. 57-NQ/TW.</p>
+                <p class="text-md text-gray-500 mb-8 max-w-2xl mx-auto mt-4">This website presents my personal information, essay, and ideas aimed at contributing to the development of the Internet in Vietnam, in the spirit of Resolution No. 57-NQ/TW.</p>
                 <a href="#essay" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300 text-lg">View My Essay</a>
             </div>
         </section>
@@ -53,40 +100,67 @@
                 <h2 class="section-title">About Me</h2>
                 <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-start">
                     <div class="card">
-                        <img src="avatar.jpg" alt="CV Photo of Le Duy Viet" class="rounded-lg shadow-md w-full">
+                        <img src="avatar.jpg" alt="CV Photo of Le Duy Viet" class="rounded-lg shadow-md mb-6 w-full">
                     </div>
                     <div class="space-y-6">
                         <div class="card">
-                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Le Duy Viet</h3>
-                            <p class="text-gray-700 mb-3">
-                                I am an inquisitive second-year Information Technology student at Dalat University. Passionate about technology's societal impact, I dedicate to turning creative ideas into tangible products.
-                            </p>
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Overview</h3>
+                            <p><strong>Full Name:</strong> Le Duy Viet</p>
                             <p><strong>Date of Birth:</strong> May 26, 2006</p>
+                            <p><strong>University:</strong> Dalat University</p>
+                            <p><strong>Major:</strong> Information Technology</p>
                             <p><strong>Email:</strong> vietld.vn@gmail.com</p>
                             <p><strong>Phone:</strong> (+84) 912 218 985</p>
                         </div>
                         
                         <div class="card">
-                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Skills & Experience</h3>
-                            <p class="text-gray-700 font-medium">Core Skills:</p>
-                            <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700 text-sm mb-3">
-                                <li><strong>Technical:</strong> Python, C++, C#, HTML, JavaScript, Tailwind CSS.</li>
-                                <li><strong>Design & UX/UI:</strong> Figma, Adobe Photoshop, Sketch, User Research.</li>
-                                <li><strong>Specialized:</strong> IT Support, Network Protocols, Cybersecurity Fundamentals.</li>
-                                <li><strong>Languages & Soft Skills:</strong> Vietnamese (Native), English (Proficient), Teamwork, Problem-Solving.</li>
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Personality</h3>
+                            <p class="text-gray-700">I am an inquisitive, proactive, and detail-oriented individual with a strong passion for technology and its societal impact. I consider myself a lifelong learner, constantly seeking new knowledge and skills, as demonstrated by my self-study through various online courses and personal projects. I am a collaborative team player who enjoys solving complex problems and transforming creative ideas into tangible products.</p>
+                            <p class="lang-vi">Em là một người ham học hỏi, chủ động và tỉ mỉ, có niềm đam mê lớn với công nghệ và những tác động của nó đối với xã hội. Em luôn giữ tinh thần học hỏi suốt đời, không ngừng tìm kiếm kiến thức và kỹ năng mới, điều này được thể hiện qua quá trình tự học của em qua nhiều khóa học trực tuyến và các dự án cá nhân. Em có khả năng hợp tác và làm việc nhóm tốt, thích giải quyết các vấn đề phức tạp và biến những ý tưởng sáng tạo thành sản phẩm cụ thể.</p>
+                        </div>
+
+                        <div class="card">
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Education</h3>
+                             <p class="text-gray-700">I am currently a second-year student pursuing a Bachelor's degree in Information Technology at Dalat University. My coursework has provided me with a solid foundation in computer science, programming, and network fundamentals.</p>
+                             <p class="lang-vi">Hiện tại, em là sinh viên năm hai, đang theo học chương trình Cử nhân ngành Công nghệ Thông tin tại Trường Đại học Đà Lạt. Chương trình học đã trang bị cho em một nền tảng kiến thức vững chắc về khoa học máy tính, lập trình và các nguyên lý mạng máy tính cơ bản.</p>
+                        </div>
+
+                        <div class="card">
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Experience</h3>
+                            <p class="text-gray-700">While I do not have formal work experience yet, I have gained significant practical experience through a series of personal projects that have honed my technical and design skills:</p>
+                            <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700 mt-2">
+                                <li><strong>Portfolio Website Development:</strong> Designed and built my personal portfolio website from scratch using HTML, CSS, and JavaScript, showcasing my ability to create professional and responsive web pages.</li>
+                                <li><strong>E-commerce & Social Media UI Clones:</strong> Developed front-end mockups of complex platforms like Shopee, Facebook, and YouTube. These projects helped me master modern tools like Tailwind CSS and deepen my understanding of user interface design and component-based structure.</li>
+                                <li><strong>Online Certifications:</strong> Completed professional certificate programs from Google (UX Design, IT Support, Cybersecurity), freeCodeCamp, HackerRank, and Udemy, which provided structured learning and hands-on labs in specialized fields.</li>
                             </ul>
-                            <p class="text-gray-700 font-medium">Key Projects & Certifications:</p>
-                             <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700 text-sm">
-                                <li>Developed a personal portfolio website and UI clones (Shopee, Facebook, YouTube).</li>
-                                <li>Completed professional certificates from Google (UX Design, IT Support, Cybersecurity), freeCodeCamp, HackerRank, and Udemy.</li>
+                            <p class="lang-vi mt-2">Mặc dù chưa có kinh nghiệm làm việc chính thức, em đã tích lũy được nhiều kinh nghiệm thực tế quý báu thông qua các dự án cá nhân, giúp em rèn luyện và nâng cao kỹ năng kỹ thuật cũng như thiết kế của mình:</p>
+                            <ul class="list-disc list-inside ml-4 space-y-1 text-gray-500 text-sm italic mt-1">
+                                <li><strong>Phát triển Website Portfolio Cá nhân:</strong> Tự thiết kế và xây dựng website portfolio cá nhân từ đầu bằng HTML, CSS và JavaScript, thể hiện khả năng tạo ra các trang web chuyên nghiệp và có tính đáp ứng cao.</li>
+                                <li><strong>Clone Giao diện các trang TMĐT & Mạng xã hội:</strong> Xây dựng các bản mô phỏng giao diện (mockup) cho các nền tảng phức tạp như Shopee, Facebook, YouTube. Các dự án này giúp em thành thạo các công cụ hiện đại như Tailwind CSS và hiểu sâu hơn về thiết kế giao diện người dùng.</li>
+                                <li><strong>Hoàn thành các Chứng chỉ Trực tuyến:</strong> Hoàn thành các chương trình chứng chỉ chuyên nghiệp từ Google (Thiết kế UX, Hỗ trợ CNTT, An ninh mạng), freeCodeCamp, HackerRank và Udemy, qua đó được học tập có cấu trúc và thực hành trong các lĩnh vực chuyên sâu.</li>
                             </ul>
                         </div>
 
                         <div class="card">
-                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Interest in Internet Governance</h3>
-                            <p class="text-gray-700">My interest in Internet Governance stems from my technical studies, evolving from how the internet works to who makes it work and why. I am fascinated by the multi-stakeholder model and VNNIC's role in managing national resources like the <code>.vn</code> domain and IP addresses.</p>
-                            <p class="text-gray-700 mt-2">Understanding the policies behind the internet is essential for building responsible and secure solutions. I am eager to learn about Vietnam's digital policies and contribute to these conversations through the VISY Fellowship.</p>
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Skills</h3>
+                            <p class="text-gray-700"><strong>Technical Skills:</strong> Python, C++, C#, HTML5, CSS3, JavaScript, Tailwind CSS.</p>
+                            <p class="lang-vi"><strong>Kỹ năng Kỹ thuật:</strong> Python, C++, C#, HTML5, CSS3, JavaScript, Tailwind CSS.</p>
+                            <p class="text-gray-700 mt-1"><strong>Design & UX/UI Skills:</strong> Figma, Adobe Photoshop, Sketch, User Research, Wireframing, Prototyping.</p>
+                            <p class="lang-vi"><strong>Kỹ năng Thiết kế & UX/UI:</strong> Figma, Adobe Photoshop, Sketch, Nghiên cứu Người dùng, Wireframing, Prototyping.</p>
+                            <p class="text-gray-700 mt-1"><strong>Specialized Knowledge:</strong> IT Support, Network Protocols, Cybersecurity Fundamentals.</p>
+                            <p class="lang-vi"><strong>Kiến thức Chuyên môn:</strong> Hỗ trợ CNTT, Giao thức Mạng, Nguyên tắc An ninh mạng.</p>
+                            <p class="text-gray-700 mt-1"><strong>Languages & Soft Skills:</strong> Vietnamese (Native), English (Proficient in communication), Teamwork, Problem-Solving, Time Management.</p>
+                            <p class="lang-vi"><strong>Ngôn ngữ & Kỹ năng mềm:</strong> Tiếng Việt (Bản ngữ), Tiếng Anh (Giao tiếp tốt), Làm việc nhóm, Giải quyết vấn đề, Quản lý thời gian.</p>
                         </div>
+
+                        <div class="card">
+                            <h3 class="text-xl font-semibold text-blue-700 mb-2">Interest in Internet Governance</h3>
+                            <p class="text-gray-700">My interest in Internet Governance stems from my technical studies. Initially, I was curious about <em>how</em> the internet works—DNS resolution, IP routing, etc. This curiosity has evolved into a deeper question of <em>who</em> makes it work and <em>why</em> it works the way it does. I am fascinated by the multi-stakeholder model and the critical role organizations like VNNIC play in managing national resources like the <code>.vn</code> domain and IP addresses.</p>
+                            <p class="text-gray-700 mt-2">I believe that understanding the policies, standards, and politics behind the internet is essential for any technologist aiming to build responsible, secure, and globally interoperable solutions. I am eager to learn more about Vietnam's digital policies, cybersecurity strategies, and how national infrastructure contributes to our digital sovereignty and innovation goals. Participating in the VISY Fellowship would be a fantastic opportunity to engage with experts and contribute to these important conversations.</p>
+                            <p class="lang-vi mt-2">Sự quan tâm của em đối với Quản trị Internet bắt nguồn từ quá trình học tập kỹ thuật của mình. Ban đầu, em chỉ tò mò về việc Internet hoạt động <em>như thế nào</em> – từ phân giải DNS, định tuyến IP, v.v. Dần dần, sự tò mò đó đã phát triển thành những câu hỏi sâu hơn: <em>Ai</em> đã làm cho nó hoạt động và <em>tại sao</em> nó lại vận hành theo cách đó?</p>
+                            <p class="lang-vi mt-2">Em rất hứng thú với mô hình đa bên và vai trò then chốt của các tổ chức như VNNIC trong việc quản lý tài nguyên quốc gia như tên miền <code>.vn</code> và địa chỉ IP. Em tin rằng việc thấu hiểu các chính sách, tiêu chuẩn và cả các yếu tố liên quan đằng sau Internet là vô cùng cần thiết đối với bất kỳ nhà công nghệ nào muốn xây dựng các giải pháp có trách nhiệm, an toàn và có khả năng tương tác toàn cầu. Em mong muốn được tìm hiểu sâu hơn về các chính sách số, chiến lược an ninh mạng của Việt Nam, cũng như cách hạ tầng quốc gia đóng góp vào chủ quyền số và các mục tiêu đổi mới sáng tạo. Việc tham gia VISY Fellowship sẽ là một cơ hội tuyệt vời để em được giao lưu với các chuyên gia và đóng góp vào những cuộc thảo luận quan trọng này.</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -242,7 +316,7 @@
                         </div>
                     
                         <h4 class="text-xl font-semibold text-gray-700 mt-6 mb-3">3. Trích dẫn nguồn tham khảo:</h4>
-                        <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700">
+                         <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700">
                             <li><a href="https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-quyet-ve-dot-pha-phat-trien-khoa-hoc-cong-nghe-doi-moi-sang-tao-va-chuyen-doi-so-quoc-gia-119241224180048642.htm" target="_blank" class="text-blue-600 hover:underline">Nghị quyết số 57-NQ/TW của Bộ Chính trị.</a></li>
                             <li><a href="https://vnnic.vn/" target="_blank" class="text-blue-600 hover:underline">Website Trung tâm Internet Việt Nam (VNNIC)</a>.</li>
                             <li><a href="https://thuvienphapluat.vn/van-ban/Cong-nghe-thong-tin/Quyet-dinh-749-QD-TTg-2020-phe-duyet-Chuong-trinh-Chuyen-doi-so-quoc-gia-444136.aspx" target="_blank" class="text-blue-600 hover:underline">Quyết định số 749/QĐ-TTg Phê duyệt "Chương trình Chuyển đổi số quốc gia đến năm 2025, định hướng đến năm 2030".</a></li>
@@ -259,78 +333,68 @@
         <section id="creative" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <h2 class="section-title">Skills & Projects</h2>
-                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Certificates and Personal Projects</p>
-
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="card">
                         <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/1FE0MNXPD964" target="_blank">
                             <img src="cert/Cyber.png" alt="Image of Google Cybersecurity Coursera Certificate" class="rounded-md mb-4 w-full h-48 object-cover">
                             <h3 class="text-xl font-semibold text-blue-700 mb-2">Google Cybersecurity (Coursera)</h3>
-                            <p class="text-gray-600 mb-3 text-sm">Foundations of cybersecurity and system protection measures from the Google program.</p>
+                            <p class="text-gray-600 mb-3 text-sm mt-2">Foundations of cybersecurity and system protection measures from the Google program.</p>
                         </a>
                     </div>
-                    
                     <div class="card">
                         <a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/ZWPCH0SRQTQE" target="_blank">
                             <img src="cert/ITSupport.png" alt="Image of Google IT Support Coursera Certificate" class="rounded-md mb-4 w-full h-48 object-cover">
                             <h3 class="text-xl font-semibold text-blue-700 mb-2">Google IT Support (Coursera)</h3>
-                            <p class="text-gray-600 mb-3 text-sm">Professional IT support knowledge and skills from the Google program.</p>
+                            <p class="text-gray-600 mb-3 text-sm mt-2">Professional IT support knowledge and skills from the Google program.</p>
                         </a>
                     </div>
-
                     <div class="card">
                         <a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/XEXL21TQ7AT9" target="_blank">
                             <img src="cert/uxdesign.png" alt="Image of Google UX Design Coursera Certificate" class="rounded-md mb-4 w-full h-48 object-cover">
                             <h3 class="text-xl font-semibold text-blue-700 mb-2">Google UX Design (Coursera)</h3>
-                            <p class="text-gray-600 mb-3 text-sm">Completed the Professional Certificate in User Experience Design from Google.</p>
+                            <p class="text-gray-600 mb-3 text-sm mt-2">Completed the Professional Certificate in User Experience Design from Google.</p>
                         </a>
                     </div> 
-
                     <div class="card">
                         <a href="https://www.hackerrank.com/certificates/iframe/450df963b3b3" target="_blank">
                             <img src="cert/Python.png" alt="Image of Python HackerRank Certificate" class="rounded-md mb-4 w-full h-48 object-cover">
                             <h3 class="text-xl font-semibold text-blue-700 mb-2">Python Certificate (HackerRank)</h3>
-                            <p class="text-gray-600 mb-3 text-sm">Completed Python skill assessments, including basic concepts and problem-solving.</p>
+                            <p class="text-gray-600 mb-3 text-sm mt-2">Completed Python skill assessments, including basic concepts and problem-solving.</p>
                         </a>
                     </div>
-
                     <div class="card">
                         <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-ae013a23-0ca1-4bca-b04b-0c3b826335cb.jpg" target="_blank">
                             <img src="cert/cpp.jpg" alt="Image of C++ Udemy Certificate" class="rounded-md mb-4 w-full h-48 object-cover">
                             <h3 class="text-xl font-semibold text-blue-700 mb-2">C++ Programming Certificate (Udemy)</h3>
-                            <p class="text-gray-600 mb-3 text-sm">Mastered foundational knowledge and advanced concepts in C++ programming through an online course.</p>
+                            <p class="text-gray-600 mb-3 text-sm mt-2">Mastered foundational knowledge and advanced concepts in C++ programming through an online course.</p>
                         </a>
                     </div>    
-
                     <div class="card">
                         <a href="https://www.freecodecamp.org/certification/VietUniverse/responsive-web-design" target="_blank">
                             <img src="cert/RWD.png" alt="Image of Responsive Web Design freeCodeCamp Certificate" class="rounded-md mb-4 w-full h-48 object-cover">
                             <h3 class="text-xl font-semibold text-blue-700 mb-2">Responsive Web Design (freeCodeCamp)</h3>
-                            <p class="text-gray-600 mb-3 text-sm">Skills in building responsive websites compatible with all devices using HTML5 and CSS3.</p>
+                            <p class="text-gray-600 mb-3 text-sm mt-2">Skills in building responsive websites compatible with all devices using HTML5 and CSS3.</p>
                         </a>
                     </div>                   
-                    
                     <div class="card">
                         <a href="https://vietuniverse.github.io/E-commerce" target="_blank">
                             <img src="cert/shop.png" alt="Image of E-commerce website project" class="rounded-md mb-4 w-full h-48 object-cover">
                             <h3 class="text-xl font-semibold text-blue-700 mb-2">E-commerce Website Project</h3>
-                            <p class="text-gray-600 mb-3 text-sm">A UI mockup of an e-commerce website, focusing on user experience and responsive design.</p>
+                            <p class="text-gray-600 mb-3 text-sm mt-2">A UI mockup of an e-commerce website, focusing on user experience and responsive design.</p>
                         </a>
                     </div>
-
                     <div class="card">
                         <a href="https://vietuniverse.github.io/fb" target="_blank">
                             <img src="cert/fb.png" alt="Image of Facebook clone project" class="rounded-md mb-4 w-full h-48 object-cover">
                             <h3 class="text-xl font-semibold text-blue-700 mb-2">Facebook UI Clone Project</h3>
-                            <p class="text-gray-600 mb-3 text-sm">A UI mockup of the Facebook homepage, practicing HTML, CSS, and Tailwind CSS skills.</p>
+                            <p class="text-gray-600 mb-3 text-sm mt-2">A UI mockup of the Facebook homepage, practicing HTML, CSS, and Tailwind CSS skills.</p>
                         </a>
                     </div>
-                    
                     <div class="card">
                         <a href="https://vietuniverse.github.io/ytb" target="_blank">
                             <img src="cert/ytb.png" alt="Image of YouTube clone project" class="rounded-md mb-4 w-full h-48 object-cover">
                             <h3 class="text-xl font-semibold text-blue-700 mb-2">YouTube UI Clone Project</h3>
-                            <p class="text-gray-600 mb-3 text-sm">A UI mockup of the YouTube homepage, practicing complex web interface design skills.</p>
+                            <p class="text-gray-600 mb-3 text-sm mt-2">A UI mockup of the YouTube homepage, practicing complex web interface design skills.</p>
                         </a>
                     </div>
                 </div>
@@ -342,31 +406,8 @@
                 <h2 class="section-title">Contact</h2>
                 <div class="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-xl text-center">
                     <p class="text-gray-700 mb-4">Thank you to VNNIC for taking the time to review my application. I look forward to your feedback and the opportunity to contribute to the VISY Fellowship 2025 program.</p>
-                    <p class="text-gray-700 mb-2"><strong>Email:</strong> <a href="mailto:vietld.vn@gmail.com" class="text-blue-500 hover:underline">vietld.vn@gmail.com</a></p>
-                    <p class="text-gray-700 mb-2"><strong>Phone:</strong> (+84) 912 218 985</p>
-                    <p class="text-gray-700 mb-6"><strong>Address:</strong> Doan Thi Diem, Ward 4, Dalat, Lam Dong</p>
+                    <p class="text-gray-700 mb-2 mt-4"><strong>Email:</strong> <a href="mailto:vietld.vn@gmail.com" class="text-blue-500 hover:underline">vietld.vn@gmail.com</a></p>
+                    <p class="text-gray-700 mb-6"><strong>Phone:</strong> (+84) 912 218 985</p>
                     <div class="flex justify-center space-x-4">
-                        
                         <a href="https://www.linkedin.com/in/vi%E1%BB%87t-l%C3%AA-duy-498209348/" target="_blank" class="text-gray-500 hover:text-blue-600 transition duration-300">
-                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
-                        </a>
-                        <a href="https://www.facebook.com/tuilavietle" target="_blank" class="text-gray-500 hover:text-blue-700 transition duration-300">
-                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10s-10 4.477-10 10c0 4.99 3.657 9.128 8.438 9.878v-6.987h-2.54v-2.891h2.54v-2.077c0-2.508 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.73h2.773l-.443 2.891h-2.33v6.987c4.781-.75 8.437-4.888 8.437-9.878z" clip-rule="evenodd"/></svg>
-                        </a>
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-gray-800 text-gray-300 py-8 text-center">
-        <div class="container mx-auto px-6">
-            <p>© <span id="currentYear"></span> Le Duy Viet</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-
-</body>
-</html>
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.77
