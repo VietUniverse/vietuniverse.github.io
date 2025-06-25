@@ -10,10 +10,10 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f0f2f5; /* Màu nền tổng thể nhẹ nhàng */
+            background-color: #f0f2f5;
         }
         .top-bar {
-            background-color: #FA5230; /* Màu cam đặc trưng */
+            background-color: #FA5230;
         }
         .search-bar-container {
             background-color: #FFFFFF;
@@ -34,10 +34,10 @@
         }
         .category-card, .product-card {
             background-color: white;
-            border-radius: 0.5rem; /* 8px */
+            border-radius: 0.5rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-            overflow: hidden; /* Để bo góc cho ảnh */
+            overflow: hidden;
         }
         .category-card:hover, .product-card:hover {
             transform: translateY(-4px);
@@ -69,7 +69,6 @@
             border-radius: 0.25rem;
             font-weight: 500;
         }
-         /* Custom scrollbar cho flash sale */
         .flash-sale-items::-webkit-scrollbar {
             height: 6px;
         }
@@ -319,38 +318,30 @@
                     <h5 class="font-bold text-gray-800 mb-3">THANH TOÁN</h5>
                     {/* Thêm hình ảnh các phương thức thanh toán */}
                     <div class="flex flex-wrap gap-2">
-                        <img src="https://placehold.co/50x30/CCCCCC/FFFFFF?text=Visa" alt="[Hình ảnh logo Visa]" class="h-6">
-                        <img src="https://placehold.co/50x30/CCCCCC/FFFFFF?text=Master" alt="[Hình ảnh logo Mastercard]" class="h-6">
-                        <img src="https://placehold.co/50x30/CCCCCC/FFFFFF?text=JCB" alt="[Hình ảnh logo JCB]" class="h-6">
-                        <img src="https://placehold.co/50x30/CCCCCC/FFFFFF?text=COD" alt="[Hình ảnh logo COD]" class="h-6">
+                        <img src="items/Visa-Logo.png" alt="[Hình ảnh logo Visa]" class="h-6">
+                        <img src="items/master.jpg" alt="[Hình ảnh logo Mastercard]" class="h-6">
+                        <img src="items/jcb.webp" alt="[Hình ảnh logo JCB]" class="h-6">
+                        <img src="items/cod.jpg" alt="[Hình ảnh logo COD]" class="h-6">
                     </div>
                     <h5 class="font-bold text-gray-800 mt-4 mb-3">ĐƠN VỊ VẬN CHUYỂN</h5>
                      <div class="flex flex-wrap gap-2">
-                        <img src="https://placehold.co/70x30/CCCCCC/FFFFFF?text=GHN" alt="[Hình ảnh logo Giao Hàng Nhanh]" class="h-6">
-                        <img src="https://placehold.co/70x30/CCCCCC/FFFFFF?text=GHTK" alt="[Hình ảnh logo Giao Hàng Tiết Kiệm]" class="h-6">
-                        <img src="https://placehold.co/70x30/CCCCCC/FFFFFF?text=VNPOST" alt="[Hình ảnh logo VNPost]" class="h-6">
+                        <img src="items/ghn.png" alt="[Hình ảnh logo Giao Hàng Nhanh]" class="h-6">
+                        <img src="items/ghtk.webp" alt="[Hình ảnh logo Giao Hàng Tiết Kiệm]" class="h-6">
+                        <img src="items/vnpost.webp" alt="[Hình ảnh logo VNPost]" class="h-6">
                     </div>
                 </div>
                 <div>
                     <h5 class="font-bold text-gray-800 mb-3">THEO DÕI CHÚNG TÔI</h5>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-orange-500"><i class="fab fa-facebook-square mr-2"></i>Facebook</a></li>
-                        <li><a href="#" class="hover:text-orange-500"><i class="fab fa-instagram mr-2"></i>Instagram</a></li>
-                        <li><a href="#" class="hover:text-orange-500"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a></li>
+                        <li><a href="fb.com/tuilavietle" target="_blank" class="hover:text-orange-500"><i class="fab fa-facebook-square mr-2"></i>Facebook</a></li>
+                        <li><a href="instagram.com/tuilavietle" target="_blank" class="hover:text-orange-500"><i class="fab fa-instagram mr-2"></i>Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/vi%E1%BB%87t-l%C3%AA-duy-498209348/" target="_blank" class="hover:text-orange-500"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a></li>
                     </ul>
-                    <h5 class="font-bold text-gray-800 mt-4 mb-3">TẢI ỨNG DỤNG SHOPONLINE</h5>
-                    <div class="flex items-center space-x-2">
-                        <img src="https://placehold.co/80x80/333333/FFFFFF?text=QR" alt="[Hình ảnh mã QR tải ứng dụng]" class="h-16 w-16 border rounded">
-                        <div class="flex flex-col space-y-1">
-                             <a href="#"><img src="https://placehold.co/100x30/000000/FFFFFF?text=App+Store" alt="[Hình ảnh nút tải từ App Store]" class="h-8"></a>
-                             <a href="#"><img src="https://placehold.co/100x30/000000/FFFFFF?text=Google+Play" alt="[Hình ảnh nút tải từ Google Play]" class="h-8"></a>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="border-t border-gray-300 pt-6 text-center text-xs text-gray-500">
-                <p>&copy; <span id="currentYear"></span> ShopOnline. Tất cả các quyền được bảo lưu.</p>
-                <p class="mt-1">Địa chỉ: Tòa nhà ABC, Đường XYZ, Quận 1, TP. Hồ Chí Minh. Email: support@shoponline.example.com</p>
+                <p>&copy; <span id="currentYear"></span> ShopOnline. Sản phẩm dự thi BrandID của Lê Duy Việt</p>
+                <p class="mt-1">Địa chỉ: Đoàn Thị Điểm, Phường Xuân Hương, TP. Đà Lạt, Lâm Đồng - Email: vietld.vn@gmail.com</p>
             </div>
         </div>
     </footer>
