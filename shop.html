@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All - AURA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+            --color-primary: #1A1A1A; /* Charcoal Black */
+            --color-secondary: #F8F7F4; /* Off-White */
+            --color-accent: #004D40; /* Deep Teal */
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; color: #1A1A1A; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; font-weight: 600; }
+        .product-card:hover .product-image { transform: scale(1.05); }
+        .form-checkbox, .form-radio { border-color: #D1D5DB; appearance: none; width: 1.25rem; height: 1.25rem; display: inline-block; vertical-align: middle; position: relative; cursor: pointer; }
+        .form-checkbox { border-radius: 0.25rem; } .form-radio { border-radius: 9999px; }
+        .form-checkbox:checked, .form-radio:checked { background-color: #004D40; border-color: #004D40; }
+        .form-checkbox:checked::after { content: '✓'; color: white; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 0.8rem; }
+        .color-swatch.active { box-shadow: 0 0 0 2px white, 0 0 0 4px var(--color-accent); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="w-full py-6 px-4 md:px-8 bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200">
+         <div class="container mx-auto flex justify-between items-center">
+            <nav class="hidden md:flex items-center space-x-8 text-sm">
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="collections.html" class="nav-link">Collections</a>
+                <a href="journal.html" class="nav-link">Journal</a>
+            </nav>
+            <div class="text-center">
+                <a href="index.html" class="font-serif text-3xl tracking-widest">AURA</a>
+            </div>
+            <div class="flex items-center space-x-6 text-lg">
+                <a href="shop.html" class="hover:text-accent transition-colors"><i class="fas fa-search"></i></a>
+                <a href="register.html" class="hover:text-accent transition-colors"><i class="fas fa-user"></i></a>
+                <a href="cart.html" class="hover:text-accent transition-colors relative">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="absolute -top-1 -right-1.5 bg-accent text-white text-xs rounded-full h-4 w-4 flex items-center justify-center font-sans">3</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 md:px-8 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl">All Products</h1>
+            <p class="mt-4 max-w-xl mx-auto text-gray-500">Discover pieces designed to last, crafted with care, and chosen for you.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <aside class="lg:col-span-1">
+                <div class="sticky top-28">
+                    <div class="mb-8 relative">
+                        <input type="text" id="search-input" placeholder="Search products..." class="w-full py-2 pl-4 pr-10 border border-gray-300 focus:outline-none focus:border-accent">
+                        <i class="fas fa-search absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+
+                    <div class="py-4 border-b" id="category-filter">
+                        <h3 class="font-semibold mb-3">Category</h3>
+                        <div class="space-y-2 text-sm">
+                            <a href="#" data-category="all" class="block text-accent font-bold">All Products</a>
+                            <a href="#" data-category="decor" class="block text-gray-600 hover:text-accent">Home & Decor</a>
+                            <a href="#" data-category="apparel" class="block text-gray-600 hover:text-accent">Apparel</a>
+                            <a href="#" data-category="care" class="block text-gray-600 hover:text-accent">Self-Care</a>
+                            <a href="#" data-category="accessories" class="block text-gray-600 hover:text-accent">Accessories</a>
+                        </div>
+                    </div>
+
+                     <div class="py-4 border-b" id="price-filter">
+                        <h3 class="font-semibold mb-3">Price Range</h3>
+                         <div class="space-y-2 text-sm">
+                             <label class="flex items-center"><input type="radio" name="price" value="all" class="form-radio mr-2" checked> All</label>
+                             <label class="flex items-center"><input type="radio" name="price" value="0-1000000" class="form-radio mr-2"> Under 1,000,000₫</label>
+                             <label class="flex items-center"><input type="radio" name="price" value="1000000-5000000" class="form-radio mr-2"> 1,000,000₫ - 5,000,000₫</label>
+                             <label class="flex items-center"><input type="radio" name="price" value="5000000-10000000" class="form-radio mr-2"> 5,000,000₫ - 10,000,000₫</label>
+                             <label class="flex items-center"><input type="radio" name="price" value="10000000" class="form-radio mr-2"> Over 10,000,000₫</label>
+                        </div>
+                    </div>
+
+                    <div class="py-4" id="color-filter">
+                        <h3 class="font-semibold mb-3">Color</h3>
+                         <div class="flex flex-wrap gap-2">
+                             <span data-color="all" class="px-2 py-1 text-xs border cursor-pointer active">All</span>
+                             <span data-color="black" class="color-swatch w-6 h-6 rounded-full bg-black border cursor-pointer"></span>
+                             <span data-color="white" class="color-swatch w-6 h-6 rounded-full bg-white border cursor-pointer"></span>
+                             <span data-color="grey" class="color-swatch w-6 h-6 rounded-full bg-gray-400 border cursor-pointer"></span>
+                             <span data-color="brown" class="color-swatch w-6 h-6 rounded-full bg-yellow-900 border cursor-pointer"></span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="lg:col-span-3">
+                 <div class="flex justify-between items-center mb-6">
+                    <p id="results-count" class="text-sm text-gray-500">Showing 12 of 20 results</p>
+                    <select id="sort-select" class="border border-gray-300 py-2 px-3 text-sm focus:outline-none focus:border-accent">
+                        <option value="newest">Sort by Newest</option>
+                        <option value="price-asc">Sort by Price: Low to High</option>
+                        <option value="price-desc">Sort by Price: High to Low</option>
+                    </select>
+                </div>
+                
+                <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+                </div>
+                 <div id="no-results" class="hidden text-center py-16">
+                    <p class="text-xl font-serif">No products found</p>
+                    <p class="text-gray-500 mt-2">Try adjusting your filters to find what you're looking for.</p>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-primary text-secondary mt-16" style="color: var(--color-secondary); background-color: var(--color-primary);">
+        <div class="container mx-auto px-4 md:px-8 py-16">
+             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+                <div class="lg:col-span-2">
+                    <a href="#" class="font-serif text-2xl tracking-widest">AURA</a>
+                    <p class="mt-4 text-sm text-gray-400 max-w-xs">Curated goods for a life lived with intention. Quality, craftsmanship, and timeless design.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold tracking-wider uppercase text-sm mb-4">Shop</h4>
+                    <nav class="space-y-3 text-sm">
+                        <a href="#" class="block hover:text-white">New Arrivals</a>
+                        <a href="#" class="block hover:text-white">Home & Decor</a>
+                        <a href="#" class="block hover:text-white">Apparel</a>
+                        <a href="#" class="block hover:text-white">Self-Care</a>
+                    </nav>
+                </div>
+                 <div>
+                    <h4 class="font-bold tracking-wider uppercase text-sm mb-4">About</h4>
+                    <nav class="space-y-3 text-sm">
+                        <a href="#" class="block hover:text-white">Our Story</a>
+                        <a href="journal.html" class="block hover:text-white">Journal</a>
+                        <a href="#" class="block hover:text-white">Contact Us</a>
+                        <a href="#" class="block hover:text-white">FAQs</a>
+                    </nav>
+                </div>
+                 <div>
+                    <h4 class="font-bold tracking-wider uppercase text-sm mb-4">Follow</h4>
+                    <nav class="space-y-3 text-sm">
+                        <a href="#" class="block hover:text-white">Instagram</a>
+                        <a href="#" class="block hover:text-white">Pinterest</a>
+                        <a href="#" class="block hover:text-white">Facebook</a>
+                    </nav>
+                </div>
+            </div>
+             <div class="mt-16 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
+                <p>&copy; <span id="currentYear"></span> AURA. All Rights Reserved. A project by Le Duy Viet.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initial product data embedded in HTML -->
+    <div id="initial-products" class="hidden">
+        <!-- Product 1 -->
+        <div class="product-item" data-id="1" data-name="Linen Armchair" data-price="12500000" data-category="decor" data-color="white" data-newest="12">
+            <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800" alt="Linen Armchair">
+        </div>
+        <!-- Product 2 -->
+        <div class="product-item" data-id="2" data-name="Artistic Ceramic Vase" data-price="1800000" data-category="decor" data-color="white" data-newest="11">
+             <img src="https://images.unsplash.com/photo-1663888672547-360e763e4ac7?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Artistic Ceramic Vase">
+        </div>
+        <!-- Product 3 -->
+        <div class="product-item" data-id="3" data-name="Handcrafted Scented Candle" data-price="950000" data-category="care" data-color="white" data-newest="10">
+            <img src="https://plus.unsplash.com/premium_photo-1661490822132-359dd22f8362?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Handcrafted Scented Candle">
+        </div>
+        <!-- Product 4 -->
+        <div class="product-item" data-id="4" data-name="Leather Tote Bag" data-price="8200000" data-category="accessories" data-color="brown" data-newest="9">
+            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800" alt="Leather Tote Bag">
+        </div>
+        <!-- Product 5 -->
+        <div class="product-item" data-id="5" data-name="Marble Arch Floor Lamp" data-price="9800000" data-category="decor" data-color="black" data-newest="8">
+             <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800" alt="Marble Arch Floor Lamp">
+        </div>
+        <!-- Product 6 -->
+        <div class="product-item" data-id="6" data-name="Classic Canvas Sneaker" data-price="4500000" data-category="apparel" data-color="white" data-newest="7">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800" alt="Classic Canvas Sneaker">
+        </div>
+        <!-- Product 7 -->
+        <div class="product-item" data-id="7" data-name="Modern Modular Sofa" data-price="35000000" data-category="decor" data-color="grey" data-newest="6">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800" alt="Modern Modular Sofa">
+        </div>
+        <!-- Product 8 -->
+        <div class="product-item" data-id="8" data-name="Herbal Bath Salts" data-price="750000" data-category="care" data-color="white" data-newest="5">
+            <img src="https://plus.unsplash.com/premium_photo-1679511318299-364df3b23987?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Herbal Bath Salts">
+        </div>
+        <!-- Product 9 -->
+        <div class="product-item" data-id="9" data-name="Cashmere Wool Sweater" data-price="6500000" data-category="apparel" data-color="grey" data-newest="4">
+            <img src="https://images.unsplash.com/photo-1741591940898-5a485f5f1ace?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cashmere Wool Sweater">
+        </div>
+        <!-- Product 10 -->
+        <div class="product-item" data-id="10" data-name="Handwoven Wool Rug" data-price="15400000" data-category="decor" data-color="white" data-newest="3">
+             <img src="https://plus.unsplash.com/premium_photo-1725721362512-2f47d969e554?q=80&w=1443&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Handwoven Wool Rug">
+        </div>
+        <!-- Product 11 -->
+        <div class="product-item" data-id="11" data-name="Metal Frame Sunglasses" data-price="3900000" data-category="accessories" data-color="black" data-newest="2">
+            <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800" alt="Metal Frame Sunglasses">
+        </div>
+        <!-- Product 12 -->
+        <div class="product-item" data-id="12" data-name="Oak Wood Coffee Table" data-price="7200000" data-category="decor" data-color="brown" data-newest="1">
+            <img src="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800" alt="Oak Wood Coffee Table">
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const initialProductNodes = document.querySelectorAll('#initial-products .product-item');
+            const allProducts = Array.from(initialProductNodes).map(node => ({
+                id: node.dataset.id,
+                name: node.dataset.name,
+                price: parseInt(node.dataset.price, 10),
+                category: node.dataset.category,
+                color: node.dataset.color,
+                newest: parseInt(node.dataset.newest, 10),
+                image: node.querySelector('img').src,
+                imageAlt: node.querySelector('img').alt,
+            }));
+
+            const productGrid = document.getElementById('product-grid');
+            const searchInput = document.getElementById('search-input');
+            const categoryFilter = document.getElementById('category-filter');
+            const priceFilter = document.getElementById('price-filter');
+            const colorFilter = document.getElementById('color-filter');
+            const sortSelect = document.getElementById('sort-select');
+            const resultsCount = document.getElementById('results-count');
+            const noResultsMessage = document.getElementById('no-results');
+
+            let currentFilters = {
+                searchTerm: '',
+                category: 'all',
+                priceRange: 'all',
+                color: 'all',
+                sortBy: 'newest'
+            };
+
+            function renderProducts(productsToRender) {
+                productGrid.innerHTML = '';
+                if (productsToRender.length === 0) {
+                    noResultsMessage.classList.remove('hidden');
+                } else {
+                    noResultsMessage.classList.add('hidden');
+                }
+
+                productsToRender.forEach(product => {
+                    const productCard = `
+                        <div class="product-card group text-left">
+                            <a href="#">
+                                <div class="w-full bg-gray-200 overflow-hidden">
+                                    <img src="${product.image}" alt="${product.imageAlt}" class="product-image w-full h-80 object-cover transition-transform duration-500">
+                                </div>
+                                <div class="mt-4">
+                                    <h3 class="font-medium text-gray-800">${product.name}</h3>
+                                    <p class="mt-1 text-lg font-medium">${product.price.toLocaleString('vi-VN')}₫</p>
+                                </div>
+                            </a>
+                        </div>
+                    `;
+                    productGrid.innerHTML += productCard;
+                });
+                resultsCount.textContent = `Showing ${productsToRender.length} of ${allProducts.length} results`;
+            }
+
+
+            function applyAllFiltersAndSort() {
+                let filteredProducts = [...allProducts];
+
+                if (currentFilters.searchTerm) {
+                    filteredProducts = filteredProducts.filter(p => p.name.toLowerCase().includes(currentFilters.searchTerm));
+                }
+
+                if (currentFilters.category !== 'all') {
+                    filteredProducts = filteredProducts.filter(p => p.category === currentFilters.category);
+                }
+
+                if (currentFilters.priceRange !== 'all') {
+                    const [min, max] = currentFilters.priceRange.split('-').map(Number);
+                    filteredProducts = filteredProducts.filter(p => {
+                        if (max) {
+                            return p.price >= min && p.price <= max;
+                        }
+                        return p.price >= min;
+                    });
+                }
+
+                if (currentFilters.color !== 'all') {
+                    filteredProducts = filteredProducts.filter(p => p.color === currentFilters.color);
+                }
+
+                switch (currentFilters.sortBy) {
+                    case 'price-asc':
+                        filteredProducts.sort((a, b) => a.price - b.price);
+                        break;
+                    case 'price-desc':
+                        filteredProducts.sort((a, b) => b.price - a.price);
+                        break;
+                    case 'newest':
+                    default:
+                        filteredProducts.sort((a, b) => b.newest - a.newest);
+                        break;
+                }
+
+                renderProducts(filteredProducts);
+            }
+
+            searchInput.addEventListener('keyup', (e) => {
+                currentFilters.searchTerm = e.target.value.toLowerCase();
+                applyAllFiltersAndSort();
+            });
+
+            categoryFilter.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (e.target.tagName === 'A') {
+                    currentFilters.category = e.target.dataset.category;
+                    categoryFilter.querySelectorAll('a').forEach(a => a.classList.remove('text-accent', 'font-bold'));
+                    e.target.classList.add('text-accent', 'font-bold');
+                    applyAllFiltersAndSort();
+                }
+            });
+
+            priceFilter.addEventListener('change', (e) => {
+                if (e.target.name === 'price') {
+                    currentFilters.priceRange = e.target.value;
+                    applyAllFiltersAndSort();
+                }
+            });
+            
+            colorFilter.addEventListener('click', (e) => {
+                if(e.target.dataset.color) {
+                    currentFilters.color = e.target.dataset.color;
+                    colorFilter.querySelectorAll('[data-color]').forEach(el => el.classList.remove('active'));
+                    e.target.classList.add('active');
+                    applyAllFiltersAndSort();
+                }
+            });
+
+            sortSelect.addEventListener('change', (e) => {
+                currentFilters.sortBy = e.target.value;
+                applyAllFiltersAndSort();
+            });
+
+
+            applyAllFiltersAndSort();
+            
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
