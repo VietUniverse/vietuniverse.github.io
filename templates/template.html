@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}}</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 1.2em;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        h1 {
+            font-size: 2em;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        /* --- CSS CHO HÌNH ẢNH --- */
+        article img {
+            max-width: 100%; /* Giúp ảnh co giãn theo chiều rộng container */
+            height: auto;    /* Giữ đúng tỷ lệ ảnh */
+            display: block;  /* Xóa khoảng trắng thừa bên dưới ảnh */
+            margin: 30px auto; /* Căn giữa và tạo khoảng cách trên dưới */
+            border: 1px solid #ccc; /* Thêm viền nhẹ cho đẹp */
+        }
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        a {
+            color: #000000;
+            text-decoration: underline;
+        }
+        nav {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 15px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1.1em;
+            display: block;
+            padding: 5px;
+        }
+        nav ul li a:hover, nav ul li a.current {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                {{NAVIGATION}}
+            </nav>
+        </header>
+        <main>
+            <article>
+                <h1>{{TITLE}}</h1>
+                
+                <!-- Vị trí hiển thị hình ảnh đề bài -->
+                {{IMAGE_HTML}}
+
+                <!-- Nội dung bài viết -->
+                {{CONTENT}}
+            </article>
+        </main>
+    </div>
+</body>
+</html>
