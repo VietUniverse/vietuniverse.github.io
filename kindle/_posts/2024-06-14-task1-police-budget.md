@@ -1,7 +1,7 @@
 ---
 # _posts/2024-06-14-task1-police-budget.md
 layout: default
-title: "Advantages of Living Abroad"
+title: "Police Budget"
 ---
 The table provides information about the amounts of money funded for the police force in an area in the UK from three primary sources in 2017 and 2018. Additionally, the pie chart gives data about the percentages of the entire spending of this police force in these two years on three distinctive purposes.
 

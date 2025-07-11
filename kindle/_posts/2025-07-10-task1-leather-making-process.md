@@ -1,7 +1,6 @@
 ---
-# _posts/2025-07-10-task1-leather-making-process.md
 layout: default
-title: "Advantages of Living Abroad"
+title: "Leather Making Process"
 ---
 
 Đây là phần nội dung văn bản của bạn, tương ứng với file `content.txt` mà bạn muốn.
