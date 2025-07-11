@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <style>
+        /* CSS siêu đơn giản cho Kindle */
+        body { font-family: "Amazon Ember", "Helvetica Neue", sans-serif; line-height: 1.6; max-width: 800px; margin: 20px auto; padding: 0 15px; color: #111; background-color: #fdfdfd; }
+        nav { background-color: #f0f0f0; padding: 10px; border-bottom: 1px solid #ddd; }
+        nav ul { list-style-type: none; padding: 0; margin: 0; }
+        nav li { margin-bottom: 10px; }
+        nav a { text-decoration: none; color: #0066cc; font-size: 1.1em; }
+        h1, h2 { color: #000; }
+        img { max-width: 100%; height: auto; display: block; margin: 20px 0; }
+        .content { margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><a href="/" style="text-decoration: none; color: #111;">{{ site.title }}</a></h1>
+    </header>
+
+    <hr>
+
+    <main style="display: flex;">
+        <nav style="flex: 1; margin-right: 20px;">
+            <h2>Bài viết</h2>
+            <ul>
+                {% for post in site.posts %}
+                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+
+        <article style="flex: 3;">
+            <h2>{{ page.title }}</h2>
+            <div class="content">
+                {{ content }}
+            </div>
+        </article>
+    </main>
+
+</body>
+</html>
